@@ -58,7 +58,7 @@ if 'page' not in st.session_state:
 
 page = st.sidebar.radio(
     "ページ選択",
-    ["チャット", "履歴閲覧", "サンプルデータ管理"],
+    ["チャット（質問ができます）", "履歴閲覧", "サンプルデータ管理"],
     key="page_selector",
     index=["チャット", "履歴閲覧", "サンプルデータ管理"].index(st.session_state.page), # 現在のページを選択状態にする
     on_change=lambda: setattr(st.session_state, 'page', st.session_state.page_selector) # 選択変更時に状態を更新
@@ -78,4 +78,4 @@ elif st.session_state.page == "サンプルデータ管理":
 
 # --- フッターなど（任意） ---
 st.sidebar.markdown("---")
-st.sidebar.info("開発者: [Your Name]")
+st.sidebar.info("開発者: Hana")
